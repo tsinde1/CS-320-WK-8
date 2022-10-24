@@ -1,0 +1,82 @@
+/*
+ *
+ *  Created on: Sep 17, 2022
+ *      Author: tabitha dorcas sinde
+ */
+
+package contact;
+
+import java.util.ArrayList;
+
+public class ContactService { //this sets a list of contacts
+
+private ArrayList<Contact>contacts;
+
+public ContactService() {
+
+contacts = new ArrayList<>();//this marks the beginning of array list
+
+}
+
+public boolean addContact(Contact contact) { // i am setting add contact to have all values
+booelan contactAlready = false; 
+for(Contact contactList:contacts) { //this will run through all contacts in the list
+
+if(contactList.equals(contact)) { //i am testing if there is a contact already
+contactAlready = true;
+}
+}
+
+if(!contactAlready) { //if there is no contact
+contacts.add(contat);
+return true; // afteradding a contact the program will run true
+}
+else {
+return false;
+}
+}
+
+public boolean deleteContact(String contactID) { // deleting any needed contact
+
+for(Contact contactList:contacts) //running through the contcats list
+}
+if(contactList.getContactID().equals(contactID)) {
+
+contacts.remove(contactList);
+return true;
+}
+}
+else {
+return false;
+}
+
+public boolean updateContact(String contactID, String firstName, String lastName, String phoneNumber, String address) {
+
+for (Contact contactList:contacts) { //running through the loop again
+
+if(contactList.getContactID().equals(contactID)) {
+
+if(!firstName.equals("") && !(firstName.length()>10)) {
+
+contactList.setFirstName(firstName);
+}
+if(!lastName.equals("") && !(lastName.length>10)) {
+contactList.setFirstName(lastName);
+}
+if(!phoneNumber.equals("") && (phoneNumber.length()==10)) {
+contactList.setFirstName(phoneNumber);
+}
+if(!address.equals("") && !(address.length()>30)) {
+contactList.setFirstName(address);
+}
+return true;
+}
+}
+else{
+return false;
+}
+}
+
+
+
+
